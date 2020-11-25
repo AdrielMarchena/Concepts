@@ -10,6 +10,7 @@ namespace structures {
 		T m_data = NULL;
 		Data* m_next = nullptr;
 	};
+
 	template<typename T>
 	class List
 	{
@@ -24,9 +25,7 @@ namespace structures {
 
 		void insert(T p_Element)
 		{
-			/* I need to clear this things here */
 			Data<T>* newData = new Data<T>;
-			/* Oh God oh no this up here is a memory leak */
 			newData->m_data = p_Element;
 			newData->m_next = nullptr;
 			if (isEmpty())
