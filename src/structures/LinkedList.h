@@ -20,7 +20,7 @@ namespace structures {
 		{
 		}
 
-		~List(){}
+		~List() { clear(); }
 
 		void insert(T p_Element)
 		{
@@ -64,6 +64,8 @@ namespace structures {
 
 		void clear()
 		{
+			if (isEmpty()) return;
+
 			Data<T>* temp = &m_List;
 			Data<T>* aux = nullptr;
 			while (m_List.m_next != nullptr)
