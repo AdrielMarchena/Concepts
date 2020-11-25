@@ -19,6 +19,19 @@ int main()
     
     /* The LinkedList is not working properly yet (memory leak :P) */
 
+    List<float> list;
+
+    list.list();
+    list.insert(0.0f);
+
+    for (int i = 0; i < 6; i++)
+        list.insert((std::rand() % 10) - 3);
+
+    list.list();
+    list.clear();
+    list.list();
+
+
     // 'Pause' the application
     std::cin.get();
 }
